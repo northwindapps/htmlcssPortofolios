@@ -1,3 +1,4 @@
+
 header{
     align-items: center;
     height: 100vh;
@@ -9,7 +10,7 @@ header{
 
 header:before{
     animation: fade-slide-down 2s .5s cubic-bezier(0,0.5,0,1) forwards;
-    background: url("img/lee-blanchflower-wvjlLSgPNGk-unsplash.jpg") no-repeat bottom;
+    background: linear-gradient(to bottom, rgba(255,200,250,0) ,rgba(0,0,0,.0)), url("img/lee-blanchflower-wvjlLSgPNGk-unsplash.jpg") no-repeat bottom;
     background-size: cover;
     content: "";
     position: absolute;
@@ -18,6 +19,11 @@ header:before{
     right: 0;
     top: 0;
     z-index: -1;
+}
+
+section{
+    z-index: 1;
+    color: black;
 }
 
 header:after{
@@ -32,14 +38,72 @@ header:after{
     transform-origin: 0 0;
 }
 
+h1{
+    text-align: center;
+}
+
+ul{
+    margin: 0px;
+}
+
+li{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+li ul {
+   padding: 0 10px;
+   font-size: 2rem;
+   font-family: 'Lato', sans-serif;
+}
+
+.header-title {
+    padding: 0 10px;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+ }
+
+li ul:nth-child(5){
+    padding-bottom: 5px;
+}
+
+/* .colon{
+    animation: linear 1s blinking infinite;
+} */
+
 @keyframes fade-slide-down {
     0% {
         opacity: 0;
-            transform: translateY(-10rem);
+        transform: translateY(-10rem);
     }
 
     100% {
         opacity: 1;
         transform: none;
     }
+}
+
+@keyframes blinking{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width:500px){
+    li ul{
+        font-size: 1.5rem;
+        padding: 0 7.5px;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        padding: 0 7.5px;
+        font-family: 'Lato', sans-serif;
+        
+     }
 }
