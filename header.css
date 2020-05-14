@@ -1,0 +1,45 @@
+header{
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /*delete this line and see what happens*/
+    position: relative;/*delete this line and see what happens*/
+}
+
+header:before{
+    animation: fade-slide-down 2s .5s cubic-bezier(0,0.5,0,1) forwards;
+    background: url("img/lee-blanchflower-wvjlLSgPNGk-unsplash.jpg") no-repeat bottom;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+header:after{
+    background-color: white;
+    content: "";
+    height: 40rem;
+    left: -5%;
+    position: absolute;
+    right: -5%;
+    top: 90%;
+    transform: rotateZ(-4deg);
+    transform-origin: 0 0;
+}
+
+@keyframes fade-slide-down {
+    0% {
+        opacity: 0;
+            transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
