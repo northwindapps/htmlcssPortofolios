@@ -7,6 +7,7 @@ const minutesLabel = document.getElementsByClassName('minutes')[0];
 const secLabel = document.getElementsByClassName('seconds')[0];
 let colonLabel = document.getElementsByClassName('colon')[0];
 let mincolonLabel = document.getElementsByClassName('mincolon')[0];
+let currentTimeLabel = document.getElementsByTagName('li')[0];
 
 
 function updateTime(){
@@ -42,6 +43,8 @@ function updateTime(){
             }
         );
     }
+
+    currentTimeLabel.style.display = 'flex';
 }; 
 
 function sleep (time) {
